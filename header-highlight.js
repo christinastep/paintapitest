@@ -1,20 +1,13 @@
 registerPaint('headerHighlight', class {
 
-  /*
-       define if alphatransparency  is allowed alpha
-       is set to true by default. If set to false, all
-       colors used on the canvas will be fully opaque
-    */
-  static get contextOptions() {
-           return { alpha: true };
-    }
+  // Whether Alpha is allowed - This is set to true by default, if it is set to false all colours used on the canvas will have full opacity, or alpha of 1.0
+  static get contextOptions() { return {alpha: true}; }
 
-    /*
-        ctx is the 2D drawing context
-        a subset of the HTML5 Canvas API.
-    */
   paint(ctx) {
-        ctx.fillStyle = 'hsla(55, 90%, 60%, 1.0)';
-        ctx.fillRect(0, 15, 200, 20);     /* order: x, y, w, h */
+    // ctx -> drawing context
+
+		ctx.fillStyle = 'hsla(55, 90%, 60%, 1.0)';
+		ctx.fillRect(0, 15, 200, 20);
+
   }
 });
